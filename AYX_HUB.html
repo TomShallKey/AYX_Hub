@@ -32,9 +32,22 @@ margin-bottom: 55px;
 font-weight: 700;
 letter-spacing: 1px;
 }
+.kolumny {
+display: flex;
+gap: 40px;
+max-width: 1200px;
+margin: 0 auto;
+align-items: flex-start;
+}
 .sekcja {
-max-width: 1100px;
-margin: 0 auto 50px auto;
+flex: 1 1 0;
+min-width: 0;
+margin-bottom: 50px;
+}
+@media (max-width: 800px) {
+.kolumny {
+flex-direction: column;
+}
 }
 .sekcja-naglowek {
 font-size: 0.8rem;
@@ -117,6 +130,7 @@ text-decoration: underline;
 <div class="zawartosc">
 <h1>Co dzisiaj robimy?</h1>
 
+<div class="kolumny">
 <div class="sekcja">
   <div class="sekcja-naglowek">Narzędzia</div>
   <div class="grid-container">
@@ -191,6 +205,7 @@ text-decoration: underline;
       <div class="tytul">Personel Lotniczy</div>
     </a>
   </div>
+</div>
 </div>
 
 </div>
