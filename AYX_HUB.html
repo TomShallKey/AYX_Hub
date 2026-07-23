@@ -32,38 +32,64 @@ margin-bottom: 55px;
 font-weight: 700;
 letter-spacing: 1px;
 }
+.sekcja {
+max-width: 1100px;
+margin: 0 auto 50px auto;
+}
+.sekcja-naglowek {
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #c4a0aa;
+margin-bottom: 20px;
+padding-bottom: 10px;
+border-bottom: 1px solid #f0e6e8;
+}
+.sekcja-naglowek.grist {
+color: #7a9ec0;
+border-bottom-color: #d6e8f5;
+}
 .grid-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-max-width: 1000px;
-margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
 .kafelek {
 background: white;
-border-radius: 20px;
-padding: 40px 30px;
-text-align: center;
+border-radius: 12px;
+padding: 14px 24px;
+text-align: left;
 text-decoration: none;
 color: #5a4a4d;
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 border: 2px solid transparent;
+display: flex;
+align-items: center;
+gap: 18px;
 }
 .kafelek:hover {
-transform: translateY(-8px);
-box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
-border-color: #e3c4cb; 
+transform: translateX(5px);
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+border-color: #e3c4cb;
+}
+.kafelek.grist:hover {
+border-color: #a8cce0;
+transform: translateX(5px);
 }
 .ikona {
-font-size: 45px;
-margin-bottom: 20px;
+font-size: 24px;
+margin-bottom: 0;
+flex-shrink: 0;
+width: 32px;
+text-align: center;
 }
 .tytul {
-font-size: 1.15rem;
+font-size: 0.95rem;
 font-weight: 500;
 margin: 0;
-letter-spacing: 1px;
+letter-spacing: 0.8px;
 text-transform: uppercase;
 }
 footer{
@@ -90,44 +116,79 @@ text-decoration: underline;
 <body>
 <div class="zawartosc">
 <h1>Co dzisiaj robimy?</h1>
-<div class="grid-container">
-<a href="https://pansa-my.sharepoint.com/:l:/r/personal/tomasz_szalkiewicz_pansa_pl/Lists/ATSEP%202026%20Kalendarz?e=mYZSef" class="kafelek">
-<div class="ikona">📆</div>
-<div class="tytul">Kalendarz szkoleń</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/docs/meDsLR62kPwG/Budget2026" class="kafelek">
-<div class="ikona">💰</div>
-<div class="tytul">Budżet 2026</div>
-</a>
-<a href="https://intranet.pansa.pl/szkolenia_db/menu_poziom.php" class="kafelek">
-<div class="ikona">📚</div>
-<div class="tytul">Menu szkoleń</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/ayx/ivuspzJ6m3XA/Karta-OJT?utm_id=share-doc" class="kafelek">
-<div class="ikona">🌍</div>
-<div class="tytul">Karty OJT</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/ayx/hrd4Q8EebUVr/ATSEP-Oceny?utm_id=share-doc" class="kafelek">
-<div class="ikona">📜</div>
-<div class="tytul">Certyfikaty</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/ayx/qnfSHF5kHYdi/Kontrakty-Instr" class="kafelek">
-<div class="ikona">💼</div>
-<div class="tytul">Kontrakty instruktorów</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/docs/9B2C8bvUaP9f/Upowaznienia?utm_id=share-doc" class="kafelek">
-<div class="ikona">🧑‍✈️</div>
-<div class="tytul">Personel Lotniczy</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/ayx/dUjNTjwv3oFo/Fakturomat-BruttoNetto?utm_id=share-doc" class="kafelek">
-<div class="ikona">📑</div>
-<div class="tytul">Fakturomat</div>
-</a>
-<a href="https://vp-ay-grist.pansa.pl/o/ayx/vPHj5VoMinCA/IANS" class="kafelek">
-<div class="ikona">✈️</div>
-<div class="tytul">IANS</div>
-</a>
+
+<div class="sekcja">
+  <div class="sekcja-naglowek">Narzędzia</div>
+  <div class="grid-container">
+    <a href="https://intranet.pansa.pl/szkolenia_db/menu_poziom.php" class="kafelek">
+      <div class="ikona">📚</div>
+      <div class="tytul">Menu Szkoleń</div>
+    </a>
+    <a href="https://pansa-my.sharepoint.com/:l:/r/personal/tomasz_szalkiewicz_pansa_pl/Lists/ATSEP%202026%20Kalendarz?e=mYZSef" class="kafelek">
+      <div class="ikona">📆</div>
+      <div class="tytul">Kalendarz Szkoleń ATSEP</div>
+    </a>
+    <a href="https://ezdrp-web.saas1.ezdrp.gov.pl/" class="kafelek">
+      <div class="ikona">🗂️</div>
+      <div class="tytul">EZD</div>
+    </a>
+    <a href="https://ead.cloud.pansa.pl/documents/zsz/" class="kafelek">
+      <div class="ikona">&#x1F4C4;</div>
+      <div class="tytul">EPOD</div>
+    </a>
+    <a href="https://archillea.pansa.pl/FG/FormBuilder/Renderer/IndexByName?formName=MainPage" class="kafelek">
+      <div class="ikona">🏛️</div>
+      <div class="tytul">Archillea</div>
+    </a>
+    <a href="https://intranet.pansa.pl/_pokaz_katalog.php?path=dokumenty_ZSZ/Procesy%20zarz%B1dcze/Zarz%B1dzanie%20personelem" class="kafelek">
+      <div class="ikona">📋</div>
+      <div class="tytul">ZSZ - Zarządzanie Personelem</div>
+    </a>
+    <a href="https://pansa.sharepoint.com/sites/Office3" class="kafelek">
+      <div class="ikona">🏢</div>
+      <div class="tytul">pansaNET — Biuro Szkoleń</div>
+    </a>
+    <a href="https://elearning.pansa.pl" class="kafelek">
+      <div class="ikona">🎓</div>
+      <div class="tytul">eLearning</div>
+    </a>
+  </div>
 </div>
+
+<div class="sekcja">
+  <div class="sekcja-naglowek grist">Grist</div>
+  <div class="grid-container">
+    <a href="https://vp-ay-grist.pansa.pl/o/docs/meDsLR62kPwG/Budget2026" class="kafelek grist">
+      <div class="ikona">💰</div>
+      <div class="tytul">Budżet 2026</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/ayx/vPHj5VoMinCA/IANS" class="kafelek grist">
+      <div class="ikona">✈️</div>
+      <div class="tytul">IANS</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/ayx/dUjNTjwv3oFo/Fakturomat-BruttoNetto?utm_id=share-doc" class="kafelek grist">
+      <div class="ikona">🧾</div>
+      <div class="tytul">Fakturomat</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/ayx/hrd4Q8EebUVr/ATSEP-Oceny?utm_id=share-doc" class="kafelek grist">
+      <div class="ikona">📜</div>
+      <div class="tytul">Certyfikaty</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/ayx/ivuspzJ6m3XA/Karta-OJT?utm_id=share-doc" class="kafelek grist">
+      <div class="ikona">🌍</div>
+      <div class="tytul">Karty OJT</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/ayx/qnfSHF5kHYdi/Kontrakty-Instr" class="kafelek grist">
+      <div class="ikona">💼</div>
+      <div class="tytul">Kontrakty Instruktorów</div>
+    </a>
+    <a href="https://vp-ay-grist.pansa.pl/o/docs/9B2C8bvUaP9f/Upowaznienia?utm_id=share-doc" class="kafelek grist">
+      <div class="ikona">🧑‍✈️</div>
+      <div class="tytul">Personel Lotniczy</div>
+    </a>
+  </div>
+</div>
+
 </div>
 <footer>
 Coś nie działa? Daj znać: <a href="mailto: gabriela.ciurkowska@pansa.pl">gabriela.ciurkowska@pansa.pl</a>
